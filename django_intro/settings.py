@@ -26,7 +26,8 @@ SECRET_KEY = '77#6qydfo*hgdes44k=yaa4^vmg1i1cpefky079*xh=2zcbkv$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-intro-keers165.c9users.io']
+ALLOWED_HOSTS = ['django-intro-keers165.c9users.io',
+                'keers165-django-intro.herokuapp.com']
 
 
 # Application definition
