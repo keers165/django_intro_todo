@@ -18,10 +18,10 @@ from django.urls import path, re_path
 from intro.views import get_todo_list, create_item, edit_item, toggle_status
 
 urlpatterns = [
-    path(r'admin/', admin.site.urls),
-    path(r'', get_todo_list),
-    path(r'add', create_item),
-    re_path(r'^edit/(?P<id>\d+)$', edit_item),
-    path(r'edit/<int:id>',edit_item),
-    path(r'toggle/<int:id>', toggle_status)
+    path('admin/', admin.site.urls),
+    path('', get_todo_list),
+    path('add', create_item),
+ #   re_path(r'^edit/(?P<id>\d+)$', edit_item),
+    path('edit/<int:id>',edit_item),
+    path('toggle/<int:id>', toggle_status)
 ]

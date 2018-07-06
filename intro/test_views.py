@@ -19,7 +19,7 @@ class TestViews(TestCase):
         item = Item(name="Create a Test")
         item.save()
 
-        page = self.client.get("/edit/{0}".format(item.id))
+        page = self.client.get("/edit/{}".format(item.id))
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, "item_form.html")
     
