@@ -27,7 +27,7 @@ SECRET_KEY = '77#6qydfo*hgdes44k=yaa4^vmg1i1cpefky079*xh=2zcbkv$'
 DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),
-                (os.environ.get('HOSTNAME')]
+                os.environ.get('HOSTNAME')]
 
 
 # Application definition
