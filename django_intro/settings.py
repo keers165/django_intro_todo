@@ -26,8 +26,8 @@ SECRET_KEY = '77#6qydfo*hgdes44k=yaa4^vmg1i1cpefky079*xh=2zcbkv$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-intro-keers165.c9users.io',
-                'keers165-django-intro.herokuapp.com']
+ALLOWED_HOSTS = [('C9_HOSTNAME'),
+                ('HOSTNAME')]
 
 
 # Application definition
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'django_intro.wsgi.application'
 # }
 #}
 
-DATABASES = {'default': dj_database_url.parse('postgres://ddfyopczsnalpy:42c81c07a56fb16a6f70c9717279ab8b23a51251f4edafa02e7b6c4811fa419d@ec2-54-217-235-137.eu-west-1.compute.amazonaws.com:5432/d1s0v598p1piv7')}
+DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 
 # Password validation
